@@ -1,0 +1,13 @@
+/* bg: 0E103D */
+/* headers text: DE4D86 */
+/* main text: F2D7EE */
+
+html {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #0E103D;
+}
+
+#navbar-title {
+    background-color: #DE4D86;
+    font-size: 50px;
+}
