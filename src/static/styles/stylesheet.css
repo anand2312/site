@@ -1,13 +1,48 @@
 /* bg: 0E103D */
 /* headers text: DE4D86 */
 /* main text: F2D7EE */
+/* link hover: F4D35E */
+/* more scheme: https://coolors.co/1a1423-dbc2cf-da4167-f4d35e-2ca58d */
 
 html {
     font-family: 'JetBrains Mono', monospace;
     background-color: #0E103D;
 }
 
-#navbar-title {
+#navbar {
+    display: flex;
     background-color: #DE4D86;
+    margin: 10px 5px;
+}
+
+#return-to-main-link {
+    color: #0E103D;
+    text-decoration: none;
+}
+
+#return-to-main-link:hover {
+    color: #DBC2CF;
+}
+
+#navbar-title {
     font-size: 50px;
+    margin-left: 20px;
+    flex: 5;
+}
+
+.navbar-link {
+    flex: 1;
+    font-size: 30px;
+    text-align: center;
+    padding: auto;
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    color: #DBC2CF;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: #F4D35E;
 }

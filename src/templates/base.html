@@ -8,6 +8,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="{{ favicon }}" type="image/webp">
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../static/styles/stylesheet.css">
 
@@ -17,7 +18,9 @@
     <body>
         {% block navbar %}
         <div id="navbar">
-            <h1 id="navbar-title">anand2312</h1>
+            <h1 id="navbar-title"><a href="/" id="return-to-main-link">anand2312</a></h1>
+            <a href="/about" class="navbar-link">ABOUT ME</a>
+            <a href="/projects" class="navbar-link">PROJECTS</a>
         </div>
         {% endblock %}
     </body>

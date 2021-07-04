@@ -1,3 +1,5 @@
+import random
+
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -14,4 +16,7 @@ templates = Jinja2Templates(directory="./src/templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    favicon = f"/static/images/favicon-{random.randint(1, 3)}.webp"
+    return templates.TemplateResponse(
+        "index.html", {"request": request, "favicon": favicon}
+    )
