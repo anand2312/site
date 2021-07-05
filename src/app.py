@@ -18,5 +18,5 @@ templates = Jinja2Templates(directory="./src/templates")
 async def index(request: Request):
     favicon = f"/static/images/favicon-{random.randint(1, 3)}.webp"
     return templates.TemplateResponse(
-        "index.html", {"request": request, "favicon": favicon}
+        "index.html", {"request": request, "favicon": favicon, "title": "Index"}
     )
