@@ -16,6 +16,10 @@ gunicorn = "^20.1.0"
 [tool.poetry.dev-dependencies]
 black = "^21.6b0"
 pre-commit = "^2.13.0"
+taskipy = "^1.8.1"
+
+[tool.taskipy.tasks]
+dev-server = "poetry run uvicorn --reload src.app:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

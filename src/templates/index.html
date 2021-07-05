@@ -3,4 +3,18 @@
     {% block navbar %}
         {{ super() }}
     {% endblock %}
+
+    {% block content %}
+    <h2 class="subheading">Welcome!</h2>
+    <p class="text-block">
+        My name is Anand. This is my basic attempt at building and hosting a website :)
+    </p>
+    <p class="text-block">
+        If you want to know more about me (for whatever reason), <a href="/about" class="inline-link">go here.</a>
+    </p>
+    <p class="text-block">
+        I spend an ungodly amount of time watching cute kitty videos. If you want to see a few of the ones I like, <a href="/cute" class="inline-link">go here.</a>
+    </p>
+    {% endblock %}
+
 </body>

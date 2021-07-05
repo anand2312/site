@@ -7,6 +7,35 @@
 html {
     font-family: 'JetBrains Mono', monospace;
     background-color: #0E103D;
+    color: white;
+}
+
+.subheading {
+    font-weight: bold;
+    font-size: 35px;
+    color: #DE4D86;
+}
+
+.content {
+    color: #DBC2CF;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.inline-link {
+    color: #2CA58D;
+    text-decoration: #DE4D86;
+}
+
+.inline-link:hover {
+    color: #F4D35E;
+    text-decoration: #dd045b;
+}
+
+#blog-link {
+    text-align: left;  /* this is because of odd spacing between words caused by center align*/
 }
 
 #navbar {
