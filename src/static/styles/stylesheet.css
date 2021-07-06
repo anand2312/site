@@ -2,12 +2,17 @@
 /* headers text: DE4D86 */
 /* main text: F2D7EE */
 /* link hover: F4D35E */
+/* emphasis color: 8CBCB9 */
 /* more scheme: https://coolors.co/1a1423-dbc2cf-da4167-f4d35e-2ca58d */
 
 html {
     font-family: 'JetBrains Mono', monospace;
     background-color: #0E103D;
     color: white;
+}
+
+em {
+    color: #8CBCB9;
 }
 
 .subheading {
