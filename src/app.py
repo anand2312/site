@@ -1,11 +1,11 @@
 import itertools
-import logging
 from typing import Any
 
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from loguru import logger
 from starlette.requests import Request
 from starlette.responses import Response
 
@@ -13,6 +13,7 @@ from starlette.responses import Response
 async def handle_404(
     request: Request, exc: Any
 ) -> Response:  # i don't wanna annotate this :(
+    logger.warning(f"404 reached on {request.url}, showed error page")
     return templates.TemplateResponse(
         "404.html",
         {"request": request, "favicon": get_favicon(), "title": "404"},
