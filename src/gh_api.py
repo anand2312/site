@@ -2,10 +2,20 @@
 import asyncio
 import dataclasses
 import re
-from typing import List, Literal, Optional
+from typing import List, Optional
 
 import aiohttp
 from loguru import logger
+
+
+@dataclasses.dataclass(frozen=True)
+class RepositoryLanguage:
+    """
+    Represents the most used language in a repository.
+    """
+
+    color: str
+    name: str
 
 
 @dataclasses.dataclass(frozen=True)
@@ -15,12 +25,13 @@ class PinnedRepository:
     """
 
     # attributes here are named with camelCase to remain consistent with the API
-    __typename: Literal["Repository"]
     name: str  # bare repo name
     nameWithOwner: str  # owner/repo format
     description: str
     openGraphImageUrl: str
     url: str
+    language: RepositoryLanguage
+    stargazerCount: int
 
     @property
     def custom_url(self) -> str:
@@ -53,8 +64,12 @@ class GHApiClient:
     @property
     def query(self) -> dict:
         return {
-            "query": "query { viewer { itemShowcase { items(first:6) { nodes { __typename ... on Repository { name description nameWithOwner openGraphImageUrl url}}}}}}"
+            "query": "query { viewer { itemShowcase { items(first:6) { nodes { __typename ... on Repository { name description nameWithOwner openGraphImageUrl url stargazerCount primaryLanguage { color name }}}}}}}"
         }
+
+    def get_projects(self) -> List[PinnedRepository]:
+        """Method to pull the cached list of pinned repositories."""
+        return self._cached_response
 
     async def make_request(self) -> None:
         """
@@ -70,7 +85,18 @@ class GHApiClient:
             raw_data = await resp.json()
             logger.info("Retrieved pinned repo data from github.")
             repos = raw_data["data"]["viewer"]["itemShowcase"]["items"]["nodes"]
-        self._cached_response = [PinnedRepository(**repo) for repo in repos]
+            [
+                repo.pop("__typename") for repo in repos
+            ]  # remove the redundant typename field
+
+        self._cached_response = []
+        for repo in repos:
+            raw_lang = repo.pop("primaryLanguage")
+            lang = RepositoryLanguage(**raw_lang)
+            obj = PinnedRepository(**repo, language=lang)
+            self._cached_response.append(obj)
+
+        logger.info("Parsed pinned repo data.")
 
     async def loop(self, duration: int = 1800) -> None:
         """
@@ -94,6 +120,6 @@ class GHApiClient:
                 self.__exc_count = 0
                 await asyncio.sleep(duration)
 
-        def start(self, duration: int = 1800) -> asyncio.Task:
-            """Start the underlying task loop."""
-            return asyncio.get_running_loop().create_task(self.loop(duration=duration))
+    def start(self, duration: int = 1800) -> asyncio.Task:
+        """Start the underlying task loop."""
+        return asyncio.get_running_loop().create_task(self.loop(duration=duration))

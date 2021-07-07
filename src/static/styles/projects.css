@@ -11,32 +11,67 @@ html {
     color: white;
 }
 
+body {
+    margin: 10px 10px;
+}
+
 em {
     color: #8CBCB9;
 }
 
-.subheading {
-    font-weight: bold;
-    font-size: 35px;
-    color: #DE4D86;
-}
-
-.content {
+.text-block {
     color: #DBC2CF;
+    margin: inherit;
+    font-size: 21px;
     font-weight: bold;
-    font-size: 18px;
-    margin: 10px 10px;
     text-align: center;
 }
 
-.inline-link {
-    color: #2CA58D;
-    text-decoration: #DE4D86;
+.repo-cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: max-content;
 }
 
-.inline-link:hover {
+.repo-card {
+    border: 2px solid #8CBCB9;
+    border-radius: 10px;
+    margin: 8px 5px;
+}
+
+.repo-link {
+    margin: 4px 0px 2px 8px;
+    color: #DE4D86;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.repo-link:hover {
     color: #F4D35E;
-    text-decoration: #dd045b;
+    text-decoration: none;
+}
+
+.repo-description {
+    margin: 5px 0px 4px 8px;
+    font-size: 18px;
+}
+
+.lang-display {
+    display: flex;
+}
+
+.dot {
+    margin: 15px 7px 10px 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+#star {
+    margin: 12px 7px 10px 15px;
+    height: 25px;
+    width: 25px;
 }
 
 #blog-link {
@@ -79,9 +114,4 @@ em {
 
 .navbar-link:hover {
     color: #F4D35E;
-}
-
-#err-img {
-    width: 225px;
-    height: 290px;
 }
