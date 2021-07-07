@@ -12,6 +12,7 @@ Jinja2 = "^3.0.1"
 aiofiles = "^0.7.0"
 uvicorn = "^0.14.0"
 gunicorn = "^20.1.0"
+aiohttp = "^3.7.4"
 
 [tool.poetry.dev-dependencies]
 black = "^21.6b0"
