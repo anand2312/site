@@ -11,6 +11,7 @@ from starlette.requests import Request
 from starlette.responses import Response
 
 from src.gh_api import GHApiClient
+from src.parse_md import parse_file
 
 
 async def handle_404(
@@ -35,7 +36,7 @@ templates = Jinja2Templates(directory="./src/templates")
 
 favicon_number = itertools.cycle(range(1, 3))
 
-api_client = GHApiClient(token=config("API_TOKEN"))
+api_client = GHApiClient(token=config("API_TOKEN"))  # type: ignore
 
 basic_template_ctx = {"favicon": get_favicon()}  # extend this ctx in the views
 
