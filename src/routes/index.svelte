@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Head from "$lib/components/Head.svelte";
+    import Navbar from "$lib/components/Navbar.svelte";
+</script>
+
+<main>
+    <Head favicon="favicon-1.webp" title="Index" />
+    <Navbar />
+</main>
