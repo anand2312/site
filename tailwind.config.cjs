@@ -16,6 +16,9 @@ module.exports = {
 				},
 				gold: {
 					100: '#F4D35E'
+				},
+				lgreen: {
+					100: '#2CA58D'
 				}
 			}
 		}
