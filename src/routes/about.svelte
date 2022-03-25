@@ -32,7 +32,8 @@
 				href="https://discord.gg/python"
 				class="text-lgreen-100 hover:text-pink-500">Python Discord server</a
 			>
-			in the <em>databases</em> or <em>web development</em> channels. My username is <em>anand#8837</em>.
+			in the <em>databases</em> or <em>web development</em> channels. My username is
+			<em>anand#8837</em>.
 		</p>
 		<br />
 

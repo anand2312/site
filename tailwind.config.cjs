@@ -18,6 +18,7 @@ module.exports = {
 					100: '#F4D35E'
 				},
 				lgreen: {
+					50: '#8CBCB9',
 					100: '#2CA58D'
 				}
 			}

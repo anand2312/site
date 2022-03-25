@@ -14,15 +14,15 @@
 		<!--Large screen nav-->
 		<div class="hidden md:flex justify-evenly content-center">
 			<a
-				class="text-center font-display p-2.5 m-6 font-extralight text-xl sm:text-3xl text-pink-50 hover:text-gold-100"
+				class="text-center font-display p-3 m-6 font-extralight text-xl sm:text-2xl text-pink-50 hover:text-gold-100"
 				href="/about">ABOUT ME</a
 			>
 			<a
-				class="text-center font-display p-2.5 m-6 font-extralight text-xl sm:text-3xl text-pink-50 hover:text-gold-100"
+				class="text-center font-display p-3 m-6 font-extralight text-xl sm:text-2xl text-pink-50 hover:text-gold-100"
 				href="/projects">PROJECTS</a
 			>
 			<a
-				class="text-center font-display p-2.5 m-6 font-extralight text-xl sm:text-3xl text-pink-50 hover:text-gold-100"
+				class="text-center font-display p-3 m-6 font-extralight text-xl sm:text-2xl text-pink-50 hover:text-gold-100"
 				href="/blog">BLOG</a
 			>
 		</div>
