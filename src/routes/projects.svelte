@@ -63,8 +63,9 @@
   </div>
   <center>
     <p class="m-3 font-bold font-display text-pink-50 text-lg md:text-2xl p-1">
-      ...and more on <a href="https://anand2312.tech/r/" class="text-lgreen-100 hover:text-pink-500"
-        >GitHub.</a
+      ...and more on <a
+        href="https://github.com/anand2312"
+        class="text-lgreen-100 hover:text-pink-500">GitHub.</a
       >
     </p>
   </center>
