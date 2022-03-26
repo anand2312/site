@@ -17,9 +17,11 @@
         class="text-lgreen-100 hover:text-pink-500">go here.</a
       >
     </p>
+    <!--
     <p class="font-bold font-display text-pink-50 text-lg md:text-2xl m-2 p-1">
       I spend an ungodly amount of time watching cute kitty videos. If you want to see a few of the
       ones I like, <a href="/cute" class="text-lgreen-100 hover:text-pink-500">go here.</a>
     </p>
+    -->
   </center>
 </main>
