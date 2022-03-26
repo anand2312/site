@@ -3,7 +3,6 @@ use worker::*;
 
 mod utils;
 
-
 fn log_request(req: &Request) {
     console_log!(
         "{} - [{}], located at: {:?}, within: {}",
@@ -18,12 +17,14 @@ async fn get_pinned_repos<T>(_: Request, ctx: RouteContext<T>) -> Result<Respons
     let kv = ctx.kv("REPOS")?;
     let data = kv.get("cached").text().await?.unwrap();
     let json: Value = serde_json::from_str(data.as_str())?;
-    let to_return = json!({"data": json});
+    let to_return = json!({ "data": json });
 
     let res = Response::from_json(&to_return)?;
     let mut headers = Headers::new();
     headers.set("Content-Type", "application/json").unwrap();
-    headers.set("Access-Control-Allow-Origin", "https://*.anand2312.tech").unwrap();
+    headers
+        .set("Access-Control-Allow-Origin", "https://anand2312.tech")
+        .unwrap();
     return Ok(res.with_headers(headers));
 }
 
