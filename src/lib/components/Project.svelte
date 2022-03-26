@@ -14,7 +14,7 @@
     <div class="flex">
       <span class="dot" style="background-color: {langColor};" />
       <p class="m-0.5 py-3 text-pink-50 text-lg">{langName}</p>
-      <img src="star.svg" class="star" alt="Star" />
+      <img src="images/star.svg" class="star" alt="Star" />
       <p class="m-0.5 py-3 text-pink-50 text-lg">{stars}</p>
     </div>
   </div>

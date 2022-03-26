@@ -10,7 +10,7 @@
 </script>
 
 <main>
-  <Head favicon="favicon-2.webp" title="About" />
+  <Head favicon="images/favicon-2.webp" title="About" />
   <Navbar />
 
   <center>
