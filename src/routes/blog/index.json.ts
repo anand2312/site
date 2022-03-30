@@ -6,7 +6,10 @@ function getAllPosts() {
   try {
     return fs.readdirSync('static/posts/').map((fileName) => {
       const post = fs.readFileSync(path.resolve('static/posts', fileName), 'utf-8');
-      return grayMatter(post).data;
+      return {
+        slug: fileName.slice(0, -3),
+        ...grayMatter(post).data
+      };
     });
   } catch (e) {
     return [];

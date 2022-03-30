@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import grayMatter from 'gray-matter';
 import { marked } from 'marked';
+import { renderer } from '$lib/renderer';
+
+marked.use({ renderer });
 
 function getPost(filename: string): string {
   return fs.readFileSync(path.resolve('static/posts', `${filename}.md`), 'utf-8');
@@ -10,9 +13,8 @@ function getPost(filename: string): string {
 export async function get({ params }) {
   try {
     const post = getPost(params.slug);
-    const renderer = new marked.Renderer();
     const { data, content } = grayMatter(post);
-    const html = marked(content, { renderer });
+    const html = marked.parse(content);
 
     return {
       status: 200,
@@ -21,7 +23,7 @@ export async function get({ params }) {
       },
       body: {
         html: html,
-        ...data
+        data: data
       }
     };
   } catch (e) {
