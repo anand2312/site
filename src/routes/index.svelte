@@ -4,7 +4,7 @@
 </script>
 
 <main>
-  <Head favicon="favicon-1.webp" title="Index" />
+  <Head favicon="images/favicon-1.webp" title="Index" />
   <Navbar />
   <center>
     <h1 class="font-bold font-display text-pink-500 text-2xl md:text-3xl my-6">Welcome!</h1>

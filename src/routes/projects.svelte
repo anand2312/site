@@ -48,7 +48,7 @@
 </script>
 
 <main>
-  <Head favicon="favicon-3.webp" title="Projects" />
+  <Head favicon="images/favicon-3.webp" title="Projects" />
   <Navbar />
   <center>
     <p class="font-bold font-display text-pink-50 text-lg md:text-2xl mx-3 my-4 p-1">
