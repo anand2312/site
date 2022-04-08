@@ -17,13 +17,10 @@ function getAllPosts() {
 }
 
 export async function get() {
+  console.log(getAllPosts());
   return {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json'
-    },
     body: {
-      posts: getAllPosts()
-    }
+      "posts": getAllPosts(),
+    },
   };
 }
