@@ -1,4 +1,4 @@
-<script context="module">
+<!---<script context="module">
   export async function load({ fetch }) {
     const response = await fetch('/blog.json');
     const data = await response.json();
@@ -10,7 +10,7 @@
       }
     };
   }
-</script>
+</script> --->
 
 <script>
   import { DateTime } from 'luxon';
