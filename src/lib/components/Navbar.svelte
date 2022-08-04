@@ -23,7 +23,7 @@
       >
       <a
         class="text-center font-display p-3 m-6 font-extralight text-xl sm:text-2xl text-pink-50 hover:text-gold-100"
-        href="/blog">BLOG</a
+        href="https://blog.anand2312.xyz">BLOG</a
       >
     </div>
     <!--Mobile button-->
@@ -85,7 +85,7 @@
           </li>
           <li>
             <a
-              href="/blog"
+              href="https://blog.anand2312.xyz"
               class="block font-display text-2xl px-2 py-4 text-pink-50 hover:text-gold-100 transition duration-300"
               >BLOG</a
             >
