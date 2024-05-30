@@ -23,7 +23,7 @@ async fn get_pinned_repos<T>(_: Request, ctx: RouteContext<T>) -> Result<Respons
     let mut headers = Headers::new();
     headers.set("Content-Type", "application/json").unwrap();
     headers
-        .set("Access-Control-Allow-Origin", "https://anand2312.tech")
+        .set("Access-Control-Allow-Origin", "https://anand2312.dev")
         .unwrap();
     return Ok(res.with_headers(headers));
 }
